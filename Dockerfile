@@ -9,5 +9,4 @@ RUN go build -o bot cmd/bot/main.go
 FROM alpine:3.18 AS binary
 
 COPY --from=build /bot/bot .
-COPY --from=build /bot/.env .
 ENTRYPOINT [ "./bot" ]
