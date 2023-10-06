@@ -5,7 +5,3 @@ WORKDIR /bot
 COPY . .
 
 RUN go mod download
-
-RUN go build -o bot cmd/bot/main.go
-
-ENTRYPOINT [ "./bot" ]
